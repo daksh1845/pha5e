@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Header</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+        }
+        .top-bar {
+            background: #f4f4f4;
+            padding: 15px 0;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+        .scroll-container {
+            display: flex;
+            width: max-content;
+            animation: scroll-left 15s linear infinite;
+        }
+        @keyframes scroll-left {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+        }
+        .nav-links a:hover{
+            color:grey;
+            transition: 0.2s;
+        }
+        .search-box {
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .btn:hover{
+            color: #666;
+            transition: 0.3s;
+        }
+        .btn-black {
+            background: black;
+            color: white;
+            border-radius: 5px;
+        }
+        .btn-black:hover {
+            background: rgb(54, 54, 54);
+            color:white;
+        }
+        .btn-white {
+            background: white;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .btn-white:hover {
+            background: black;
+            color:white;
+            transition: 0.3s;
+        }
+        .middle-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            border-bottom: 1px solid #ddd;
+        }
+        .middle-section button {
+            padding: 10px 20px;
+            border: 1px solid black;
+            background: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .middle-section button:hover {
+            background: black;
+            color:white;
+            transition: 0.3s;
+        }
+        .icons {
+            font-size: 20px;
+            font-weight: 400;
+            display: flex;
+            gap: 30px;
+        }
+        .icons .fas:hover{
+            color: #666;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+        }
+        .info {
+            max-width: 50%;
+        }
+        .info h1 {
+            font-size: 100px;
+            margin: 0;
+        }
+        .info p {
+            font-size: 18px;
+            color: #666;
+        }
+        .stats {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .stats div {
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-weight: bold;
+        }
+        .card {
+            background: black;
+            color: white;
+            text-align: center;
+            font-size: 1px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .login{
+            text-decoration: none;
+            color:black;
+            font-weight:700;
+            font-size: 0.9rem;
+            margin:0 0.4rem;
+        }
+        @media (max-width: 1024px) {
+    .middle-section, .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .info {
+        max-width: 100%;
+    }
+    .info h1 {
+        font-size: 60px;
+    }
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .search-box, .btn {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        font-size: 12px;
+        padding: 10px 0;
+    }
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links {
+        gap: 5px;
+    }
+    .container {
+        padding: 30px;
+    }
+    .info h1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar {
+        display: none;
+    }
+    .nav-links {
+        display: none;
+    }
+    .middle-section {
+        padding: 20px;
+    }
+    .container {
+        padding: 20px;
+    }
+    .info h1 {
+        font-size: 40px;
+    }
+    .search-box, .btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    .stats div {
+        width: 80%;
+    }
+}
+
+        
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="scroll-container">
+            <div><b>    The Creative Pass</b>     😊 Watch all courses for just $12/month     |     </div>
+            <div><b>    The Creative Pass</b>     😊 Watch all courses for just $12/month     |     </div>
+            <div><b>    The Creative Pass</b>     😊 Watch all courses for just $12/month     </div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="logo">W.</div>
+        <div class="nav-links">
+            <a href="#">Explore</a>
+            <a href="#">Directory</a>
+            <a href="#">Academy <span style="background:black;color:white;padding:2px 5px;border-radius:3px;font-size:12px;">New</span></a>
+            <a href="#">Jobs</a>
+            <a href="#">Market</a>
+        </div>
+        <input type="text" class="search-box" placeholder="Search by Directory">
+        <div>
+            <a href="#" class="login">Log in</a>
+            <a href="#" class="login">Sign Up</a>
+            <button class="btn btn-black">Be Pro</button>
+            <button class="btn btn-white">Submit Website</button>
+        </div>
+    </div>
+    <div class="middle-section">
+        <button>Follow</button>
+        <div class="icons">
+            <i class="fas fa-share-alt"></i>
+            <i class="fas fa-external-link-alt"></i>
+        </div>
+    </div>
+    <div class="container">
+        <div class="info">
+            <h1>PHA5E</h1>
+            <p>France - Marseille</p>
+            <div class="stats">
+                <div>
+                    <p>WORKS</p>
+                    <p>14</p>
+                </div>
+                <div>
+                    <p>SOTM</p>
+                    <p>0</p>
+                </div>
+                <div>
+                    <p>SOTD</p>
+                    <p>4</p>
+                </div>
+                <div>
+                    <p>HM</p>
+                    <p>13</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Screenshot 2025-03-17 202251.png" alt="PHA5E Banner">
+        </div>
+    </div>
+</body>
+</html>
